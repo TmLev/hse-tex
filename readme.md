@@ -1,2 +1,2 @@
-# HSE LaTeX lectures
+# HSE TeX lectures
 

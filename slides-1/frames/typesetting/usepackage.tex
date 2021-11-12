@@ -1,0 +1,69 @@
+\begin{frame}[fragile]{Базовые команды: usepackage}
+
+\begin{itemize}[<+->]
+    \item \lstinline!\usepackage{}! - импорт third-party пакетов
+    \item Команда должна находиться в ``преамбуле''
+    \item Преамбула -- участок кода после \lstinline!\documentclass{}!
+    и до \lstinline!\begin{document}!
+    \item Импортов может быть сколько угодно
+    \item Можно вынести импорты и настройки стиля в отдельный .sty файл
+\end{itemize}
+
+\begin{onlyenv}<1>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \usepackage{hyperref}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<2-3>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \usepackage{hyperref}
+    \usepackage{color}
+    
+    \begin{document}
+        \href{https://github.com/latex3}
+             {\color{blue} \LaTeX \enspace GitHub repository}
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<4>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \usepackage{hyperref}
+    \usepackage{color}
+    \usepackage{amsmath}
+    \usepackage{eqlist}
+    
+    \begin{document}
+        \href{https://github.com/latex3}
+             {\color{blue} \LaTeX \enspace GitHub repository}
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<5>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \usepackage{header} % Our .sty file 
+    
+    \begin{document}
+        \href{https://github.com/latex3}
+             {\color{blue} \LaTeX \enspace GitHub repository}
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}

@@ -1,0 +1,181 @@
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: текст}
+
+\begin{itemize}[<+->]
+    \item Текст вводится как обычно
+    \item Количество пробелов не влияет на расстояние между словами
+    \item Абзацы разделяются пустой строкой
+    \item Перенос строки внутри абзаца при помощи \lstinline!\\!
+\end{itemize}
+
+\begin{onlyenv}<1>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \begin{document}
+        Hello, World!
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<2>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \begin{document}
+        Hello,            World!
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<3>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \begin{document}
+        Hello, World!
+        
+        Hello, \LaTeX!
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<4>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \begin{document}
+        LaTeX is a high-quality typesetting system. \\
+        It includes features designed for the production 
+        of technical and scientific documentation. 
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: текст}
+
+\begin{itemize}[<+->]
+    \item \lstinline!\section{Section Name}! делит текст на логические части
+    \item \lstinline!\subsection{Subsection Name}! -- подсекции
+\end{itemize}
+
+\begin{onlyenv}<1>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \begin{document}
+        \section{Introduction}
+        LaTeX is the de facto standard for the communication 
+        and publication of scientific documents.
+        
+        \section{Sponsorship}
+        You can also sponsor the work of LaTeX team members 
+        through the GitHub sponsor program.
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<2>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \begin{document}
+        \section{GitHub}
+        \subsection{What is it?}
+        GitHub is a provider of Internet hosting for 
+        software development and version control using Git.
+        
+        \subsection{Features}
+        It offers the distributed version control and 
+        source code management functionality of Git, 
+        plus its own features.
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: текст}
+
+\begin{itemize}[<+->]
+    \item \lstinline!\textbf{}! даёт жирный шрифт (bold)
+    \item \lstinline!\textit{}! наклоняет текст (italic)
+    \item Кавычки-ёлочки задаются как $<<$текст$>>$
+    \item Кавычки сверху задаются как $``$текст$''$
+\end{itemize}
+
+\begin{onlyenv}<1-2>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        \documentclass{article}
+        
+        \begin{document}
+            Hello, \textbf{World}! So nice to \textit{see} you!
+        \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<3-4>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        \documentclass{article}
+        
+        \begin{document}
+            <<Higher School of Economics>>
+            
+            ``Higher School of Economics''
+        \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: текст}
+
+\begin{itemize}
+    \item Указать название документа можно при помощи \lstinline!\title{}!
+    \item Автор задаётся командой \lstinline!\author{}!
+    \item Также можно вставить дату: \lstinline!\date{}!
+    \item \lstinline!\maketitle! -- автоматическое создание названия 
+    с автором и датой
+\end{itemize}
+
+\begin{block}{Пример}
+    \begin{lstlisting}
+    \documentclass{article}
+    
+    \title{My first document in \LaTeX}
+    \author{Me}
+    \date{\today}
+    
+    \begin{document}
+        \maketitle
+        Hello, World!
+    \end{document}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}

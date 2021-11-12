@@ -1,0 +1,196 @@
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: математика}
+
+\begin{itemize}[<+->]
+    \item Формулы внутри текста оборачиваются \$ с обеих сторон
+    \item Для отдельного блока с формулами можно использовать \lstinline!\begin{align}! и \lstinline!\end{align}!
+\end{itemize}
+
+\begin{onlyenv}<1>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    \begin{document}
+        The solution for the equation $x^3 + 2 = 10$ is $x = 2$.
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<2>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \documentclass{article}
+    
+    % Import `align` environment (and more).
+    \usepackage{amsmath}
+    
+    \begin{document}
+        Solve the following equation:
+        \begin{align}
+            z = 3y_1 + 2y_2 + 4y_3
+        \end{align}
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: математика}
+
+Можно ещё проще, без align:
+
+\begin{block}{Пример}
+    \begin{lstlisting}
+    \[
+        x + y = 45
+    \]
+    \end{lstlisting}
+\end{block}
+
+Либо equation для простых уравнений
+
+\begin{block}{Пример}
+    \begin{lstlisting}
+    \begin{equation}
+        x + y = 45
+    \end{equation}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: математика}
+
+Сила align в поколоночном выравнивании
+
+\begin{block}{Пример}
+    \begin{lstlisting}
+    % \usepackage{amsmath}
+    % \renewcommand{\b}[1]{\mathbf{#1}}
+
+    \begin{align}
+        \b{d} f(\b{x}) 
+        &= \b{d} \log(1 + \b{x^T A x}) 
+        = \b{d} \log (1 + \langle \b{A x}, \b{x} \rangle) \\
+        &=\frac{\b{d} (1 + \langle \b{A x}, \b{x} \rangle)}
+               {1 + \langle \b{A x}, \b{x} \rangle}
+        = \frac{2 \langle \b{A x}, \b{d x} \rangle}
+               {1 + \langle \b{A x}, \b{x} \rangle}
+    \end{align}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: математика}
+
+\begin{itemize}[<+->]
+    \item Умножение задаётся \textbf{не звёздочкой}
+    \item Для этого есть \lstinline!\cdot! и \lstinline!\times!
+    \item Большинство известных функций и кванторов уже доступны
+    \item Для дробей используется \lstinline!\frac{1}{2}!
+    \item Обычные скобки занимают высоту одного символа
+    \item Автомасштабирующиеся скобки -- \lstinline!\left(! и \lstinline!\right)!
+    \item Индексация и степени требуют \{\}, если больше одного символа
+\end{itemize}
+
+\begin{onlyenv}<1-2>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        Incorrect: $2 * 3 = 6$.
+        
+        Better: $2 \cdot 3 = 6$ or $2 \times 3 = 6$.
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<3>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        $\log x + \sin x = \cos x - \sqrt[5]{z}$
+        $\sum_{i = 1}^{n} i + 2 \neq 10$
+        $x \cap y = z$
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<4>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        $\frac{x}{y} = \frac{1}{1 + \frac{1}{z}}$
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<5>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        $\frac{x}{y} = (
+            \frac{1}{1 + \frac{1}{z}}
+            - \frac{z}{c}
+        )$
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<6>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        $\frac{x}{y} = \left(
+            \frac{1}{1 + \frac{1}{z}}
+            - \frac{z}{c}
+        \right)$
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<7>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+        $x_1 + x_12 + y^2 + y^22$
+        $x_1 + x_{12} + y^2 + y^{22}$
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: математика}
+
+Набор пакетов, которых должно хватить для большинства выкладок
+
+\begin{block}{Пример}
+    \begin{lstlisting}
+    % Math symbols.
+    \usepackage{amssymb}
+    
+    % Theorems.
+    \usepackage{amsthm}
+    
+    % Insert text into formulas.
+    \usepackage{amstext}      
+    
+    % Math fonts.
+    \usepackage{amsfonts}
+    
+    % Smart comma: $0,2$ --- number, $0, 2$ --- enumeration.
+    \usepackage{icomma}
+    
+    % Tweaked `amsmath`.
+    \usepackage{mathtools}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}

@@ -1,0 +1,54 @@
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: языки}
+
+\begin{itemize}[<+->]
+    \item \TeX \enspace создавался довольно давно
+    \item Тогда стандартной кодировкой была ASCII
+    \item Сейчас почти везде стараются использовать UTF-8
+    \item По умолчанию, в \TeX \enspace используется ASCII
+\end{itemize}
+
+\end{frame}
+
+% ------------------------------------------------------------
+
+\begin{frame}[fragile]{Базовые команды: языки}
+
+\begin{itemize}[<+->]
+    \item Ставим UTF-8 кодировку
+    \item Расширяем кодировку для шрифтов (чтобы не было кракозябр)
+    \item Подключаем английский и русский языки
+\end{itemize}
+
+\begin{onlyenv}<1>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    % Modern TeX compilers try to use UTF-8 encoding by default,
+    % but not all of them :(
+    \usepackage[utf8]{inputenc}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<2>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    % Default font encoding allows 7 bits per value, 
+    % `T1` makes it 8 bits.
+    % TL;DR: Try to always use it.
+    \usepackage[T1]{fontenc}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<3>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    % Enable languages used in this project.
+    \usepackage[russian,english]{babel}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}

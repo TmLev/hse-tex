@@ -1,0 +1,52 @@
+\begin{frame}[fragile]{Базовые команды: begin/end}
+
+\begin{itemize}
+    \item Команды \lstinline!\begin{}! и \lstinline!\end{}! создают новый блок
+    \item Такой блок называется ``окружением'' (environment)
+    \item Окружением отделяют особые части документа: \pause
+    \begin{itemize}[<+->]
+        \item Сам документ является окружением
+        \item Математическое окружение
+        \item Списки (нумерованные и нет, специальные bullets, \dots)
+    \end{itemize}
+\end{itemize}
+
+\begin{onlyenv}<2>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \begin{document}
+        Hello, World!
+    \end{document}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<3>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    % \usepackage{amsmath}
+    % \renewcommand{\b}[1]{\mathbf{#1}}
+    \begin{align}
+        \b{d} f(\b{X}) = -\b{X}^{-1} [\b{d X}] \, \b{X}^{-1}
+    \end{align}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\begin{onlyenv}<4>
+    \begin{block}{Пример}
+        \begin{lstlisting}
+    \begin{enumerate}
+        \item First
+        \item Second
+    \end{enumerate}
+    
+    \begin{itemize}
+        \item Item
+        \item One more
+    \end{itemize}
+        \end{lstlisting}
+    \end{block}
+\end{onlyenv}
+
+\end{frame}

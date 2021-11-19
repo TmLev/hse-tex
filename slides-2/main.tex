@@ -1,0 +1,41 @@
+\documentclass{beamer}
+
+% Use our style settings.
+\usepackage{header}
+
+% Beamer settings.
+\usetheme[]{Warsaw}
+\useoutertheme[subsection=false]{smoothbars}
+\setbeamersize{
+    text margin left=10pt,
+    text margin right=10pt,
+} 
+
+% Code listing settings.
+\lstset{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{blue},
+}
+
+% Title slide content.
+\title[\TeX: part 2]{\TeX: part 2}
+\author{Lev Khoroshansky}
+\institute[HSE]{Higher School of Economics}
+\date{19 November 2021}
+
+\begin{document}
+    \frame[plain]{\titlepage}
+    
+    \begin{frame}
+    \frametitle{Сегодня}
+    \tableofcontents
+    \end{frame}
+    
+    \input{frames/navigation/main}
+    \input{frames/more-typesetting/main}
+    \input{frames/working-environment/main}
+    \input{frames/template/main}
+    \input{frames/q-and-a/main}
+\end{document}

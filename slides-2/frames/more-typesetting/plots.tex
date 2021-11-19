@@ -1,0 +1,52 @@
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Графики}
+
+\begin{center}
+    \begin{tikzpicture}[scale=0.8]
+        \begin{axis}[ 
+            xlabel={$x_1$},
+            ylabel={$x_2$},
+            x label style={at={(axis description cs:0.45,0.25)}, anchor=north},
+            y label style={at={(axis description cs:0.2, 0.85)}, anchor=south},
+            legend style={at={(0.8, 1.4)}, anchor=north},
+            domain=0:6.5,
+            samples=10,
+            xmin=0, xmax=4.5,
+            ymin=0, ymax=6.5,
+        ] 
+            \addplot[name path = F, blue] {6 - 2 * x} node {};
+            \addlegendentry{$2x_1 + x_2 = 6$};
+            
+            \addplot[name path = S, red] {x - 1} node {};
+            \addlegendentry{$x_1 - x_2 = 1$};
+            
+            \addplot[color=teal, mark=none] (1, x);
+            \addlegendentry{$x_1 = 1$};
+            
+            \addplot[pattern=north west lines, pattern color=violet!200] 
+                fill between 
+                [of=F and S, soft clip={domain=1:2.333}];
+            
+            \addplot[mark=*] 
+                coordinates {(2.33, 1.33)} 
+                node[pin=90:{$\left( \frac{7}{3}, \frac{4}{3} \right)$}]{};
+        \end{axis}
+    \end{tikzpicture}
+\end{center}
+    
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}{Графики}
+
+Подробнее про:
+\begin{itemize}
+    \item \href{https://www.overleaf.com/learn/latex/TikZ_package}
+               {\color{blue} TikZ}
+    \item \href{https://www.overleaf.com/learn/latex/Pgfplots_package}
+               {\color{blue} Pgfplots}
+\end{itemize}
+
+\end{frame}

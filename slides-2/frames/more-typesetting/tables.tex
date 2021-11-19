@@ -1,0 +1,169 @@
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Таблицы}
+
+\begin{itemize}
+    \item Простой вариант
+\end{itemize}
+
+\begin{center}
+    \begin{tabular}{c c c}
+        x & y & z \\
+        a & b & c
+    \end{tabular}
+\end{center}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \begin{center}
+        \begin{tabular}{c c c}
+            x & y & z \\
+            a & b & c
+        \end{tabular}
+    \end{center}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Таблицы}
+
+\begin{itemize}
+    \item Вертикальное разделение
+\end{itemize}
+
+\begin{center}
+    \begin{tabular}{c | c | c}
+        x & y & z \\
+        a & b & c
+    \end{tabular}
+\end{center}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \begin{center}
+        \begin{tabular}{c | c | c}
+            x & y & z \\
+            a & b & c
+        \end{tabular}
+    \end{center}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Таблицы}
+
+\begin{itemize}
+    \item Вертикальное и горизонтальное разделение
+\end{itemize}
+
+\begin{center}
+    \begin{tabular}{| c | c | c |}
+        \hline
+        x & y & z \\
+        \hline
+        a & b & c \\
+        f & g & e \\
+    \end{tabular}
+\end{center}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \begin{center}
+        \begin{tabular}{| c | c | c |}
+            \hline
+            x & y & z \\
+            \hline
+            a & b & c \\
+            f & g & e \\
+        \end{tabular}
+    \end{center}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Таблицы}
+
+\begin{itemize}
+    \item Вертикальное и горизонтальное разделение
+\end{itemize}
+
+\begin{center}
+    \begin{tabular}{c | c | c}
+        x & y & z \\
+        \hline \hline
+        a & b & c \\
+        f & g & e \\
+    \end{tabular}
+\end{center}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \begin{center}
+        \begin{tabular}{c | c | c}
+            x & y & z \\
+            \hline \hline
+            a & b & c \\
+            f & g & e \\
+        \end{tabular}
+    \end{center}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Таблицы}
+
+\begin{itemize}
+    \item Расположение относительно документа
+\end{itemize}
+
+\begin{table}[h!] % Place table exactly `h'ere`!'
+    \centering
+    \begin{tabular}{|| c c c ||} 
+        \hline
+        x & y & z \\
+        \hline
+        a & b & c \\
+        f & g & e \\
+    \end{tabular}
+\end{table}
+
+\vspace{-0.5cm}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \begin{table}[h!] % Place table exactly `h'ere`!'
+        \centering
+        \begin{tabular}{|| c c c ||} 
+            \hline
+            x & y & z \\
+            \hline
+            a & b & c \\
+            f & g & e \\
+        \end{tabular}
+    \end{table}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+
+\begin{frame}[fragile]{Таблицы}
+
+Хороший гайд от Overleaf: 
+\href{https://www.overleaf.com/learn/latex/Tables}{\color{blue} ссылка}
+
+\end{frame}

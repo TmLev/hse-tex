@@ -1,0 +1,100 @@
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Изображения}
+
+\begin{itemize}
+    \item Подключаем пакет graphicx
+    \item Указываем путь по папки с изображениями
+\end{itemize}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \usepackage{graphicx}
+    
+    \graphicspath{ 
+        {./images/}
+    }
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Изображения}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.3]{images/detexify-small.png}
+    \caption{\href{https://detexify.kirelabs.org/classify.html}
+                  {\color{blue} Detexify}}
+\end{figure}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Изображения}
+
+\begin{itemize}
+    \item Кладём в окружение figure
+    \item Центрируем
+    \item Вставляем изображение (с масштабированием)
+    \item Добавляем подпись (необязательно)
+\end{itemize}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.3]{images/detexify-small.png}
+        \caption{\href{https://detexify.kirelabs.org/classify.html}
+                      {\color{blue} Detexify}}
+    \end{figure}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Изображения}
+
+{
+    \captionsetup[subfloat]{labelformat=empty}
+    
+    \begin{figure}
+        \centering
+        \subfloat[TeX.StackExchange]
+        {\includegraphics[width=0.4\textwidth]{images/google-stack.png}}
+        \quad
+        \subfloat[Overleaf]
+        {\includegraphics[width=0.4\textwidth]{images/google-simple.png}}
+    \end{figure}
+}
+
+\end{frame}
+
+% ------------------------------------------------------------------------------
+
+\begin{frame}[fragile]{Изображения}
+
+\begin{block}{Код}
+    \begin{lstlisting}
+    \captionsetup[subfloat]{labelformat=empty}
+    \begin{figure}
+        \centering
+        \subfloat[TeX.StackExchange]{
+            \includegraphics[width=0.4\textwidth]
+                            {images/google-stack.png}
+        }
+        \quad
+        \subfloat[Overleaf]{
+            \includegraphics[width=0.4\textwidth]
+                            {images/google-simple.png}
+        }
+    \end{figure}
+    \end{lstlisting}
+\end{block}
+
+\end{frame}

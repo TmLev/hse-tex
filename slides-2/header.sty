@@ -1,0 +1,44 @@
+% ------------------------------------------------------------
+% Languages, fonts, encodings.
+
+% Modern TeX compilers use UTF-8 encoding by default,
+% but not all of them :(
+\usepackage[utf8]{inputenc}
+
+% Default font encoding allows 7 bits per value, `T1` makes it 8 bits.
+% TL;DR: Try to always use it.
+\usepackage[T1,T2A]{fontenc}
+
+% Enable languages used in this project.
+\usepackage[russian,english]{babel}
+
+% ------------------------------------------------------------
+% Links, URLs.
+
+\usepackage{hyperref}
+
+% ------------------------------------------------------------
+% Images.
+
+% `graphicx` allows to include images.
+\usepackage{graphicx}
+\graphicspath{ 
+    {./images/}
+}
+
+% Side-by-side figures.
+\usepackage{subfig}
+
+% ------------------------------------------------------------
+% Plots.
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns}
+
+% ------------------------------------------------------------
+% Code.
+
+\usepackage{xcolor}
+\usepackage{listings}
